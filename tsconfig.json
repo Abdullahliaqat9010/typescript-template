@@ -16,14 +16,7 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "baseUrl": "src",
-    "paths": {
-      "@constants": ["constants"],
-      "router": ["router"],
-      "pages": ["pages"],
-      "components": ["components"],
-      "@redux/*": ["redux/*"],
-      "interfaces/*": ["interfaces/*"]
-    }
+    "strictFunctionTypes": false
   },
   "include": ["src"]
 }

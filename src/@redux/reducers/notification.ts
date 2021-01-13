@@ -1,9 +1,8 @@
 import { Reducer } from "redux";
-import { AuthInitialState } from "interfaces/redux/reducers/auth";
+import { NotificationState } from "interfaces/redux/reducers/notification";
 
-const initialState: AuthInitialState = {
+const initialState: NotificationState = {
   token: null,
-  isLoggedIn: false,
 };
 
 const reducer: Reducer = (state = initialState, action) => {

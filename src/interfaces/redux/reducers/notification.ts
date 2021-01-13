@@ -1,3 +1,3 @@
-export interface NotificationInitialState {
+export interface NotificationState {
   token: string | null;
 }

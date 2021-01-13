@@ -1,4 +1,4 @@
-export interface AuthInitialState {
+export interface AuthState {
   token: string | null;
-  isLoggedIn: boolean;
+  isLoggedIn?: boolean;
 }

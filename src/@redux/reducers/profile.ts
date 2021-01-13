@@ -1,8 +1,9 @@
 import { Reducer } from "redux";
-import { NotificationInitialState } from "interfaces/redux/reducers/notification";
+import { ProfileState } from "interfaces/redux/reducers/profile";
 
-const initialState: NotificationInitialState = {
-  token: null,
+const initialState: ProfileState = {
+  name: "",
+  email: "",
 };
 
 const reducer: Reducer = (state = initialState, action) => {
