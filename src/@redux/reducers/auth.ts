@@ -17,6 +17,7 @@ const reducer: Reducer<AuthState, AuthActionTypes> = (
       return {
         ...state,
         token,
+        isLoggedIn: true,
       };
     }
     case LOGOUT: {
