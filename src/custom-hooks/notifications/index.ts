@@ -4,13 +4,14 @@ import { env } from "@env";
 import { useDispatch } from "react-redux";
 import { setToken } from "@redux/actions/notification";
 
-export const useNotificationRegisteration = () => {
+export const useNotificationRegisteration = (): boolean => {
+  const isFCMSupported = firebase.messaging.isSupported();
   const [loading, setLoading] = useState(true);
-  const messaging = firebase.messaging();
   const dispatch = useDispatch();
 
   const getToken = async () => {
     try {
+      const messaging = firebase.messaging();
       const token = await messaging.getToken({ vapidKey: env.VAPID_KEY });
       await dispatch(setToken(token));
     } catch (error) {
@@ -20,7 +21,11 @@ export const useNotificationRegisteration = () => {
     }
   };
   useEffect(() => {
-    getToken();
+    if (isFCMSupported) {
+      getToken();
+    } else {
+      setLoading(false);
+    }
     // eslint-disable-next-line
   }, []);
 

@@ -7,4 +7,5 @@ export interface ENV {
   APP_ID: string;
   MEASUREMENT_ID: string;
   VAPID_KEY: string;
+  NODE_ENV: string;
 }

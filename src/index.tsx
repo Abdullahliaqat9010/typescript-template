@@ -2,15 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "App";
+import { logger } from "utilities";
 
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker
     .register("./firebase-messaging-sw.js")
     .then(() => {
-      console.log("Background notifications enabled");
+      logger("Background notifications enabled");
     })
     .catch((err) => {
-      console.log("Service worker registration failed, error:", err);
+      logger("Service worker registration failed, error");
     });
 }
 

@@ -8,6 +8,7 @@ import { rootReducer } from "@redux/reducers";
 const persistConfig = {
   key: "root",
   storage,
+  whitelist: ["auth"],
 };
 
 const middlewares = [thunk];

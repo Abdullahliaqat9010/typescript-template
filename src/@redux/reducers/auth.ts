@@ -4,7 +4,7 @@ import { AuthActionTypes, LOGIN, LOGOUT } from "interfaces/redux/actions/auth";
 
 const initialState: AuthState = {
   token: null,
-  isLoggedIn: false,
+  isLoggedIn: true,
 };
 
 const reducer: Reducer<AuthState, AuthActionTypes> = (

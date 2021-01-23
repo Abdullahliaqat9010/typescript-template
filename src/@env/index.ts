@@ -9,4 +9,5 @@ export const env: ENV = {
   APP_ID: process.env.REACT_APP_APP_ID || "",
   MEASUREMENT_ID: process.env.REACT_APP_MEASUREMENT_ID || "",
   VAPID_KEY: process.env.REACT_APP_VAPID_KEY || "",
+  NODE_ENV: process.env.NODE_ENV,
 };
