@@ -6,6 +6,7 @@ import { PersistGate } from "redux-persist/integration/react";
 import { Provider } from "react-redux";
 import Router from "router";
 import { store, persistor } from "@redux/store";
+import "@firebase";
 
 const App = () => {
   return (
